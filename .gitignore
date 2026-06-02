@@ -1,0 +1,11 @@
+﻿# Ignore build artifacts
+*.class
+*.log
+*.tmp
+*.bak
+/bin/
+/dist/
+/out/
+/.idea/
+/.vscode/
+*.iml
