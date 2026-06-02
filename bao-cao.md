@@ -2,37 +2,39 @@
 
 ## Mục tiêu
 
-Xây dựng một ứng dụng Java console quản lý sản phẩm để minh họa quy trình phát triển và chạy thử.
+Xây dựng một dự án Java đơn giản có cả giao diện web và chức năng quản lý sản phẩm.
 
 ## Nội dung chính
 
-- Ứng dụng sử dụng Java thuần.
-- Dữ liệu lưu trữ tạm thời trong bộ nhớ (danh sách `List<Product>`).
-- Giao diện console đơn giản, dễ dùng.
+- Ứng dụng web sử dụng Spring Boot để cung cấp API REST.
+- Giao diện người dùng tĩnh được xây dựng bằng HTML, CSS và JavaScript.
+- Dữ liệu sản phẩm được lưu tạm trong bộ nhớ (`ProductService`).
 
 ## Kiến trúc mã nguồn
 
-- `src/main/java/com/duan/DuAnJavaApp.java`: lớp chính chứa menu và chức năng.
+- `pom.xml`: cấu hình Maven cho ứng dụng Spring Boot.
+- `src/main/java/com/duan/javaweb/JavaWebDemoApplication.java`: lớp khởi động Spring Boot.
+- `src/main/java/com/duan/javaweb/controller/ProductController.java`: API REST cho quản lý sản phẩm.
+- `src/main/java/com/duan/javaweb/service/ProductService.java`: dịch vụ lưu trữ sản phẩm.
+- `src/main/java/com/duan/javaweb/model/Product.java`: mô hình dữ liệu sản phẩm.
+- `src/main/resources/static/index.html`: giao diện web chính.
+- `src/main/resources/static/app.js`: JavaScript điều khiển tương tác.
+- `src/main/resources/static/styles.css`: kiểu giao diện.
 
-## Chức năng thực hiện
+## Chức năng chính của web app
 
-- Thêm sản phẩm với mã, tên và giá.
-- Hiển thị toàn bộ sản phẩm.
-- Tìm kiếm sản phẩm theo tên.
+- Hiển thị danh sách sản phẩm.
+- Thêm sản phẩm mới vào danh sách.
 - Xóa sản phẩm theo mã.
 
-## Hướng dẫn sử dụng
+## Cách chạy
 
-1. Biên dịch ứng dụng.
-2. Chạy ứng dụng.
-3. Chọn số tương ứng với chức năng.
+1. Từ thư mục `dự án java`, chạy `mvn clean package`.
+2. Chạy `mvn spring-boot:run`.
+3. Mở `http://localhost:8080` trong trình duyệt.
 
-## Ghi chú demo
+## Ghi chú
 
-- File video demo chưa được cung cấp.
-- Nếu có video, đặt tại `demo/demo-video.mp4`.
-
-## Ghi chú thêm
-
-- Report này và mã nguồn đã được commit vào repo cục bộ.
-- Bạn có thể push lên GitHub sau khi thiết lập remote.
+- Đây là một ứng dụng web đơn giản phù hợp để học Java web cơ bản.
+- Dữ liệu hiện chỉ lưu trong bộ nhớ, không dùng cơ sở dữ liệu.
+- Ứng dụng console cũ vẫn còn trong repo nếu cần tham khảo.

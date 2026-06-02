@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Web Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Java Web Demo</h1>
+        <p>Ứng dụng web Java đơn giản với Spring Boot.</p>
+
+        <div class="form-group">
+            <label for="productId">Mã sản phẩm</label>
+            <input id="productId" type="text" placeholder="P003">
+        </div>
+        <div class="form-group">
+            <label for="productName">Tên sản phẩm</label>
+            <input id="productName" type="text" placeholder="Sách" />
+        </div>
+        <div class="form-group">
+            <label for="productPrice">Giá</label>
+            <input id="productPrice" type="number" placeholder="25000" />
+        </div>
+        <button id="addButton">Thêm sản phẩm</button>
+
+        <h2>Danh sách sản phẩm</h2>
+        <table>
+            <thead>
+                <tr><th>Mã</th><th>Tên</th><th>Giá</th><th>Hành động</th></tr>
+            </thead>
+            <tbody id="productTable"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

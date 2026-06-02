@@ -2,43 +2,53 @@
 
 ## Giới thiệu
 
-Dự án Java này là một ứng dụng console quản lý sản phẩm đơn giản. Mục tiêu là minh họa cấu trúc dự án Java, các chức năng cơ bản và cách chạy chương trình.
+Dự án Java này gồm hai phần:
 
-## Chức năng
+- một ứng dụng console đơn giản để quản lý sản phẩm
+- một ứng dụng web Java đơn giản với Spring Boot và giao diện HTML/CSS/JavaScript
 
-1. Thêm sản phẩm mới
-2. Hiển thị danh sách sản phẩm
-3. Tìm kiếm sản phẩm theo tên
-4. Xóa sản phẩm theo mã
-5. Thoát chương trình
+## Chức năng web
 
-## Cài đặt và chạy
+1. Xem danh sách sản phẩm
+2. Thêm sản phẩm mới
+3. Xóa sản phẩm
+
+## Chạy ứng dụng web
 
 Yêu cầu:
-- Java 8 hoặc mới hơn
+- Java 17+ 
+- Maven
 
-Biên dịch:
+Từ thư mục `dự án java`:
+
 ```powershell
-cd "dự án java"
+mvn clean package
+mvn spring-boot:run
+```
+
+Sau đó mở trình duyệt:
+
+```text
+http://localhost:8080
+```
+
+## Chạy ứng dụng console
+
+Đây vẫn là ứng dụng console mẫu nếu bạn muốn chạy:
+
+```powershell
 javac src\main\java\com\duan\DuAnJavaApp.java
-```
-
-Chạy ứng dụng:
-```powershell
 java -cp src\main\java com.duan.DuAnJavaApp
-```
-
-Hoặc biên dịch vào thư mục output:
-```powershell
-javac -d out src\main\java\com\duan\DuAnJavaApp.java
-java -cp out com.duan.DuAnJavaApp
 ```
 
 ## Cấu trúc thư mục
 
-- `src/main/java/com/duan/DuAnJavaApp.java` - mã nguồn chính
-- `README.md` - mô tả dự án và cách chạy
-- `bao-cao.md` - báo cáo dự án
+- `pom.xml` - cấu hình Maven cho ứng dụng web
+- `src/main/java/com/duan/javaweb` - mã nguồn Spring Boot cho web app
+- `src/main/resources/static` - HTML/CSS/JS giao diện người dùng
+- `src/main/resources/application.properties` - cấu hình ứng dụng
+- `src/main/java/com/duan/DuAnJavaApp.java` - ứng dụng console cũ
+- `bao-cao.md` - báo cáo mô tả dự án
 - `demo/demo-video.mp4` - file video demo nếu có
 
 ## Video demo
@@ -48,8 +58,4 @@ Hiện tại đây là placeholder. Nếu bạn có file video quay demo, đặt
 
 ## GitHub
 
-Repo đã được commit cục bộ. Để push lên GitHub, bạn có thể tạo repo trên GitHub rồi chạy:
-```powershell
-git remote add origin <repository-url>
-git push -u origin master
-```
+Repo đã được commit cục bộ và push đến GitHub.
