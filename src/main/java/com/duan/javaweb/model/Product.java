@@ -4,6 +4,10 @@ public class Product {
     private String id;
     private String name;
     private double price;
+    private String category;
+    private int stock;
+    private double rating;
+    private String description;
 
     public Product() {
     }
@@ -12,6 +16,10 @@ public class Product {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.category = "Khác";
+        this.stock = 0;
+        this.rating = 5.0;
+        this.description = "";
     }
 
     public String getId() {
@@ -36,5 +44,37 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = Math.min(5.0, Math.max(1.0, rating));
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

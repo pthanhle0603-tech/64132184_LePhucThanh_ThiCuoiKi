@@ -1,4 +1,4 @@
-﻿package com.duan;
+package com.duan;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +16,25 @@ public class DuAnJavaApp {
             showMenu();
             String choice = scanner.nextLine().trim();
             switch (choice) {
-                case "1" -> addProduct();
-                case "2" -> listProducts();
-                case "3" -> searchProducts();
-                case "4" -> removeProduct();
-                case "5" -> {
+                case "1":
+                    addProduct();
+                    break;
+                case "2":
+                    listProducts();
+                    break;
+                case "3":
+                    searchProducts();
+                    break;
+                case "4":
+                    removeProduct();
+                    break;
+                case "5":
                     running = false;
                     System.out.println("Kết thúc chương trình. Cảm ơn!");
-                }
-                default -> System.out.println("Vui lòng chọn số từ 1 đến 5.");
+                    break;
+                default:
+                    System.out.println("Vui lòng chọn số từ 1 đến 5.");
+                    break;
             }
         }
     }

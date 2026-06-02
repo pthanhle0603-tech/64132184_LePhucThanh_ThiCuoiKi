@@ -1,0 +1,6 @@
+com\duan\javaweb\JavaWebDemoApplication.class
+com\duan\javaweb\controller\ProductController.class
+com\duan\DuAnJavaApp.class
+com\duan\javaweb\service\ProductService.class
+com\duan\javaweb\model\Product.class
+com\duan\DuAnJavaApp$Product.class
