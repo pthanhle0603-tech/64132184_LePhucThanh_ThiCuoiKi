@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-Dự án Java này là một ứng dụng mẫu dùng để quản lý danh sách sản phẩm đơn giản. Mục tiêu là minh họa cấu trúc dự án Java, các chức năng cơ bản và cách chạy chương trình.
+Dự án Java này là một ứng dụng console quản lý sản phẩm đơn giản. Mục tiêu là minh họa cấu trúc dự án Java, các chức năng cơ bản và cách chạy chương trình.
 
 ## Chức năng
 
@@ -12,20 +12,44 @@ Dự án Java này là một ứng dụng mẫu dùng để quản lý danh sác
 4. Xóa sản phẩm theo mã
 5. Thoát chương trình
 
-## Cách chạy
+## Cài đặt và chạy
 
-1. Mở terminal tại thư mục `dự án java`
-2. Biên dịch:
-   ```powershell
-   javac src\main\java\com\duan\DuAnJavaApp.java
-   ```
-3. Chạy:
-   ```powershell
-   java -cp src\main\java com.duan.DuAnJavaApp
-   ```
+Yêu cầu:
+- Java 8 hoặc mới hơn
+
+Biên dịch:
+```powershell
+cd "dự án java"
+javac src\main\java\com\duan\DuAnJavaApp.java
+```
+
+Chạy ứng dụng:
+```powershell
+java -cp src\main\java com.duan.DuAnJavaApp
+```
+
+Hoặc biên dịch vào thư mục output:
+```powershell
+javac -d out src\main\java\com\duan\DuAnJavaApp.java
+java -cp out com.duan.DuAnJavaApp
+```
+
+## Cấu trúc thư mục
+
+- `src/main/java/com/duan/DuAnJavaApp.java` - mã nguồn chính
+- `README.md` - mô tả dự án và cách chạy
+- `bao-cao.md` - báo cáo dự án
+- `demo/demo-video.mp4` - file video demo nếu có
 
 ## Video demo
 
-Đặt video demo tại: `dự án java\demo\demo-video.mp4`
+Hiện tại đây là placeholder. Nếu bạn có file video quay demo, đặt vào:
+- `demo/demo-video.mp4`
 
-> Hiện tại đây là placeholder; bạn có thể thêm file video quay demo tại đường dẫn trên.
+## GitHub
+
+Repo đã được commit cục bộ. Để push lên GitHub, bạn có thể tạo repo trên GitHub rồi chạy:
+```powershell
+git remote add origin <repository-url>
+git push -u origin master
+```

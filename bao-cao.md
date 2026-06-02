@@ -31,3 +31,8 @@ Xây dựng một ứng dụng Java console quản lý sản phẩm để minh h
 
 - File video demo chưa được cung cấp.
 - Nếu có video, đặt tại `demo/demo-video.mp4`.
+
+## Ghi chú thêm
+
+- Report này và mã nguồn đã được commit vào repo cục bộ.
+- Bạn có thể push lên GitHub sau khi thiết lập remote.
